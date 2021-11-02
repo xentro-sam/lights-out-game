@@ -95,7 +95,16 @@ class Board extends Component {
 
   render() {
     if (this.state.hasWon) {
-      return <h1>YOU WON!!!</h1>;
+      return (
+        <div className="Board-title">
+          <div className="winner">
+            <div>
+              <span className="neon-orange">YOU</span>
+              <span className="neon-blue">WIN!</span>
+            </div>
+          </div>
+        </div>
+      );
     }
     // if the game is won, just show a winning msg & render nothing else
 
@@ -114,9 +123,18 @@ class Board extends Component {
       tblBoard.push(<tr key={y}>{row}</tr>);
     }
     return (
-      <table className="Board">
-        <tbody>{tblBoard}</tbody>
-      </table>
+      <div>
+        <div className="Board-title">
+          <span className="neon-orange">Lights</span>
+          <span className="neon-blue">Out</span>
+        </div>
+        <div className="Board-info">
+          <p className="info">Each cell you flip causes itself and it neighbour cells to flip. Can you turn off all cells ? Let's find out !!!</p>
+        </div>
+        <table className="Board">
+          <tbody>{tblBoard}</tbody>
+        </table>
+      </div>
     );
   }
 }
