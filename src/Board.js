@@ -129,7 +129,7 @@ class Board extends Component {
           <span className="neon-blue">Out</span>
         </div>
         <div className="Board-info">
-          <p className="info">Each cell you flip causes itself and it neighbour cells to flip. Can you turn off all cells ? Let's find out !!!</p>
+          <p className="info">Each cell you flip causes itself and the cells directly above, below, to left, and to right to flip. Can you turn off all cells ? Let's find out !!!</p>
         </div>
         <table className="Board">
           <tbody>{tblBoard}</tbody>
